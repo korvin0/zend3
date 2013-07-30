@@ -1,7 +1,7 @@
 <?php
 class CheckAccess extends Zend_Controller_Plugin_Abstract {
     /**
-     * Метод preDispatch выполняет проверку прав доступа на
+     * Метод1 preDispatch выполняет проверку прав доступа на
      * данный controller/action в случае ошибки вызывает метод
      * generateAccessError
      * 
