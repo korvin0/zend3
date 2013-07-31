@@ -25,14 +25,14 @@
 
 Guestbook Entries: <br />
 
-<dl>
+<ul>
 
-    <?php foreach ($this->entries as $entry): ?>
+<?php
+foreach ($this->paginator as $item) echo '<li>' . $item->id . '</li>';
+?>
 
-    <dt><?php echo $this->escape($entry->email) ?></dt>
+</ul>
 
-    <dd><?php echo $this->escape($entry->comment) ?></dd>
+<?php echo $this->paginator; ?>
 
-    <?php endforeach ?>
-
-</dl>
+<?php echo $this->loginForm?>

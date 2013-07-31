@@ -8,7 +8,7 @@ class CheckAccess extends Zend_Controller_Plugin_Abstract {
      * @param Zend_Controller_Request_Abstract $request
      */
     public function  preDispatch(Zend_Controller_Request_Abstract $request) {
-        $acl = Zend_Controller_Front::getInstance()->getParam('bootstrap')->getResource('Acla');
+        $acl = Zend_Controller_Front::getInstance()->getParam('bootstrap')->getResource('Acl');
         if (!$acl->can()){
             $this->generateAccessError();
         }
